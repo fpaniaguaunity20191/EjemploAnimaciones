@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e833fa550bf2d514db267ca2614764bc
+guid: 8c5432b6a53007d47bce9cbc288966ce
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -231,7 +231,7 @@ ModelImporter:
     400222: TongueBack
     400224: TongueMid
     400226: TongueTip
-    7400000: Running
+    7400000: Falling
     9500000: //RootNode
   externalObjects: {}
   materials:
@@ -262,19 +262,19 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Running
+      name: Falling
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 19
+      lastFrame: 79
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: 0.8
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 1
+      loopBlendOrientation: 0
       loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0

@@ -9,11 +9,12 @@ public class MrHardcode : MonoBehaviour
     float x;
     float z;
     Animator animator;
-
+    AudioSource audioSource;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -43,6 +44,10 @@ public class MrHardcode : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             StopRunning();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartJumping();
         }
     }
 
@@ -103,5 +108,18 @@ public class MrHardcode : MonoBehaviour
     private void Rotate()
     {
         transform.Rotate(new Vector3(0, x, 0));
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Piedra"))
+        {
+            animator.SetTrigger("Tripping");
+        }
+    }
+
+    private void PlaySound()
+    {
+        audioSource.Play();
     }
 }
